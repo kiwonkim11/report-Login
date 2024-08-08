@@ -24,7 +24,7 @@
             android:layout_marginStart="15dp"
             android:layout_marginTop="15dp"
             android:fontFamily="@font/pretendard_bold"
-            android:hint="아이디"
+            android:hint="@string/main_logid"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -41,7 +41,8 @@
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_logid" />
+            app:layout_constraintTop_toBottomOf="@id/tv_logid"
+            android:autofillHints="아이디를 입력하세요." />
 
         <View
             android:id="@+id/view_login"
@@ -60,7 +61,7 @@
             android:layout_marginStart="15dp"
             android:layout_marginTop="15dp"
             android:fontFamily="@font/pretendard_bold"
-            android:hint="비밀번호"
+            android:hint="@string/main_logpw"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/view_login" />
@@ -80,7 +81,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_logpw" />
+            app:layout_constraintTop_toBottomOf="@id/tv_logpw"
+            android:autofillHints="비밀번호를 입력하세요." />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -88,7 +90,9 @@
         android:id="@+id/btn_login"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:text="로그인"
+        android:text="@string/main_btnlogin"
+        android:textSize="18sp"
+        android:fontFamily="@font/pretendard_extrabold"
         android:layout_marginTop="50dp"
         app:layout_constraintEnd_toStartOf="@+id/btn_res"
         app:layout_constraintHorizontal_bias="0.5"
@@ -99,7 +103,9 @@
         android:id="@+id/btn_res"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:text="회원가입"
+        android:text="@string/main_btnres"
+        android:textSize="18sp"
+        android:fontFamily="@font/pretendard_extrabold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btn_login"
