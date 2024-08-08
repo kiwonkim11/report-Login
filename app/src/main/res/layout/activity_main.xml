@@ -8,6 +8,7 @@
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/const_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="60dp"
@@ -82,5 +83,26 @@
             app:layout_constraintTop_toBottomOf="@id/tv_logpw" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="로그인"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_res"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/const_login" />
+
+    <Button
+        android:id="@+id/btn_res"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="회원가입"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_login"
+        app:layout_constraintTop_toTopOf="@id/btn_login" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
