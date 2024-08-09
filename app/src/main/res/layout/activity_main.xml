@@ -11,38 +11,38 @@
         android:id="@+id/const_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="60dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
         android:background="@drawable/background_login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/tv_logid"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <ImageView
+            android:id="@+id/iv_logid"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_marginStart="15dp"
-            android:layout_marginTop="15dp"
-            android:fontFamily="@font/pretendard_bold"
-            android:hint="@string/main_logid"
-            android:textSize="16sp"
+            android:src="@drawable/ic_id"
+            app:layout_constraintBottom_toTopOf="@id/view_login"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/et_logid"
-            android:layout_width="match_parent"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="10dp"
             android:layout_marginEnd="15dp"
+            android:autofillHints="아이디를 입력하세요."
             android:background="@android:color/transparent"
             android:fontFamily="@font/pretendard_medium"
+            android:hint="아이디"
             android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_logid"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_logid"
-            android:autofillHints="아이디를 입력하세요." />
+            app:layout_constraintStart_toEndOf="@id/iv_logid"
+            app:layout_constraintTop_toTopOf="@id/iv_logid" />
 
         <View
             android:id="@+id/view_login"
@@ -54,46 +54,44 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/et_logid" />
 
-        <TextView
-            android:id="@+id/tv_logpw"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <ImageView
+            android:id="@+id/iv_logpw"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_marginStart="15dp"
-            android:layout_marginTop="15dp"
-            android:fontFamily="@font/pretendard_bold"
-            android:hint="@string/main_logpw"
-            android:textSize="16sp"
+            android:src="@drawable/ic_pw"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/view_login" />
 
         <EditText
             android:id="@+id/et_logpw"
-            android:layout_width="match_parent"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="10dp"
             android:layout_marginEnd="15dp"
-            android:layout_marginBottom="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:autofillHints="비밀번호를 입력하세요."
             android:background="@android:color/transparent"
             android:fontFamily="@font/pretendard_medium"
+            android:hint="비밀번호"
             android:inputType="textPassword"
             android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/iv_logpw"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_logpw"
-            android:autofillHints="비밀번호를 입력하세요." />
+            app:layout_constraintStart_toEndOf="@id/iv_logpw"
+            app:layout_constraintTop_toTopOf="@id/iv_logpw" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
         android:id="@+id/btn_login"
         android:layout_width="120dp"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/pretendard_extrabold"
         android:text="@string/main_btnlogin"
         android:textSize="18sp"
-        android:fontFamily="@font/pretendard_extrabold"
-        android:layout_marginTop="50dp"
         app:layout_constraintEnd_toStartOf="@+id/btn_res"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -102,13 +100,33 @@
     <Button
         android:id="@+id/btn_res"
         android:layout_width="120dp"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
+        android:fontFamily="@font/pretendard_extrabold"
         android:text="@string/main_btnres"
         android:textSize="18sp"
-        android:fontFamily="@font/pretendard_extrabold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btn_login"
         app:layout_constraintTop_toTopOf="@id/btn_login" />
+
+    <ImageView
+        android:id="@+id/iv_kakaologin"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/kakao_login_large_narrow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_login" />
+
+    <ImageView
+        android:id="@+id/iv_naverlogin"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/naver_login_3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_kakaologin"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
