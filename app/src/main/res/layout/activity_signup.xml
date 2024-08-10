@@ -92,9 +92,21 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="30dp"
         android:hint="8~15자리 영문/숫자 조합"
+        android:inputType="textPassword"
         app:layout_constraintTop_toTopOf="@id/tv_respw"
         app:layout_constraintBottom_toBottomOf="@id/tv_respw"
         app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_pw_pattern"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="비밀번호 형식이 옳지 않습니다."
+        android:fontFamily="@font/pretendard_medium"
+        android:textColor="#FF0000"
+        app:layout_constraintTop_toBottomOf="@id/et_respw"
+        app:layout_constraintStart_toStartOf="@id/et_respw"
+        android:visibility="gone"/>
 
     <TextView
         android:id="@+id/tv_respw_check"
@@ -124,6 +136,7 @@
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="30dp"
+        android:inputType="textPassword"
         app:layout_constraintTop_toTopOf="@id/tv_respw_check"
         app:layout_constraintBottom_toBottomOf="@id/tv_respw_check"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -154,7 +167,7 @@
         android:id="@+id/btn_signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="회원가입"
+        android:text="가입완료"
         android:textSize="18sp"
         android:fontFamily="@font/pretendard_bold"
         android:layout_marginBottom="120dp"

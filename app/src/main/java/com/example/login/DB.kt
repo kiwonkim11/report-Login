@@ -27,6 +27,34 @@ class DB(context: Context) : SQLiteOpenHelper(context, "Login.db", null, 1) {
 
         val result = MyDB.insert("users", null, contentValues)
         MyDB.close()
-        return if(result == -1L) false else true
+        return if (result == -1L) false else true
+    }
+
+    // 사용자 아이디가 없으면 false, 이미 존재하면 true
+    fun checkUser(id: String?): Boolean {
+        val MyDB = this.readableDatabase
+        var res = true
+        val cursor = MyDB.rawQuery("Select * from users where id = ?", arrayOf(id))
+
+        if (cursor.count <= 0) res = false
+        return res
+    }
+
+    // 해당 id, password가 있는지 확인 (없으면 false)
+    fun checkUserpass(id: String, password: String): Boolean {
+        val MyDB = this.writableDatabase
+        var res = true
+        val cursor = MyDB.rawQuery(
+            "Select * from users where id = ? and password = ?",
+            arrayOf(id, password)
+        )
+
+        if (cursor.count <= 0) res = false
+        return res
+    }
+
+    // DB name을 Login.db로 설정
+    companion object {
+        const val DBNAME = "Login.db"
     }
 }
