@@ -21,8 +21,8 @@ class MainActivity : AppCompatActivity() {
         DB = DB(this)
 
         binding.btnLogin.setOnClickListener {
-            val etId = binding.etLogid.toString()
-            val etPw = binding.etLogpw.toString()
+            val etId = binding.etLogid.text.toString()
+            val etPw = binding.etLogpw.text.toString()
 
             // 아이디 or 비밀번호를 입력하지 않는 경우
             if (etId.isEmpty() || etPw.isEmpty()) {
