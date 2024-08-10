@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Login</string>
+    <string name="main_logid">아이디</string>
+    <string name="main_logpw">비밀번호</string>
+    <string name="main_btnlogin">로그인</string>
+    <string name="main_btnres">회원가입</string>
 </resources>
