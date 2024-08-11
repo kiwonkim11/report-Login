@@ -1,7 +1,27 @@
 <resources>
+<!--    MainActivity-->
     <string name="app_name">Login</string>
     <string name="main_logid">아이디</string>
     <string name="main_logpw">비밀번호</string>
     <string name="main_btnlogin">로그인</string>
     <string name="main_btnres">회원가입</string>
+    <string name="main_etPw">비밀번호</string>
+    <string name="main_etId">아이디</string>
+
+<!--    SignupActivity-->
+    <string name="signup_id">아이디</string>
+    <string name="signup_id_pattern">6~15자리 영문/숫자 조합</string>
+    <string name="signup_id_check">중복확인</string>
+    <string name="signup_id_dupe">이미 존재하는 아이디입니다.</string>
+    <string name="signup_id_wrong">아이디 형식이 맞지 않습니다.</string>
+    <string name="signup_id_usable">사용 가능한 아이디입니다.</string>
+    <string name="signup_pw">비밀번호</string>
+    <string name="signup_pw_pattern">8~15자리 영문/숫자 조합</string>
+    <string name="signup_pw_wrong">비밀번호 형식이 옳지 않습니다.</string>
+    <string name="signup_pw_check">비밀번호 확인</string>
+    <string name="signup_pw_mismatch">비밀번호가 일치하지 않습니다.</string>
+    <string name="signup_phone">휴대폰 번호</string>
+    <string name="signup_phone_pattern">- 제외 휴대폰 번호</string>
+    <string name="signup_signup">가입완료</string>
+
 </resources>

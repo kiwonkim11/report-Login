@@ -35,6 +35,8 @@ class SignupActivity : AppCompatActivity() {
                 Toast.makeText(this, "아이디를 입력해주세요", Toast.LENGTH_SHORT).show()
             } else {
                 if (Pattern.matches(idPattern, user)) {
+                    binding.tvIdPattern.visibility = View.GONE
+
                     val checkUsername = DB!!.checkUser(user)
 
                     // 아이디가 중복이 아닐 때
@@ -53,7 +55,9 @@ class SignupActivity : AppCompatActivity() {
 
                 // 아이디 형식이 맞지 않을 때
                 else {
-                    Toast.makeText(this, "아이디 형식이 맞지 않습니다.", Toast.LENGTH_SHORT).show()
+                    binding.tvIdPattern.visibility = View.VISIBLE
+                    binding.tvDupeId.visibility = View.GONE
+                    binding.tvUsableId.visibility = View.GONE
                 }
             }
         }
